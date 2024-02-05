@@ -21,6 +21,7 @@ const Time = (props: TimeProps) => {
                         corDeFundo={props.corPrimaria} 
                         key={colaborador.nome} 
                         colaborador={colaborador}
+                        data={colaborador.data}
                     /> 
                 )}
             </div>

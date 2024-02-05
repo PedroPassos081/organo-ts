@@ -4,9 +4,10 @@ import './Colaborador.css'
 interface ColaboradorProps {
     colaborador: IColaborador;
     corDeFundo: string;
+    data: string
 }
 
-const Colaborador = ({ colaborador, corDeFundo }: ColaboradorProps) => {
+const Colaborador = ({ colaborador, corDeFundo, data }: ColaboradorProps) => {
     return (<div className='colaborador'>
         <div className='cabecalho' style={{ backgroundColor: corDeFundo }}>
             <img src={colaborador.imagem} alt={colaborador.nome}/>
@@ -14,6 +15,7 @@ const Colaborador = ({ colaborador, corDeFundo }: ColaboradorProps) => {
         <div className='rodape'>
             <h4>{colaborador.nome}</h4>
             <h5>{colaborador.cargo}</h5>
+            <h5>{new Date(data).toDateString()}</h5>
         </div>
     </div>)
 }
