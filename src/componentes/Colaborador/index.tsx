@@ -15,7 +15,7 @@ const Colaborador = ({ colaborador, corDeFundo, data }: ColaboradorProps) => {
         <div className='rodape'>
             <h4>{colaborador.nome}</h4>
             <h5>{colaborador.cargo}</h5>
-            <h5>{new Date(data).toDateString()}</h5>
+            <h5>{new Date(data).toLocaleDateString()}</h5>
         </div>
     </div>)
 }
